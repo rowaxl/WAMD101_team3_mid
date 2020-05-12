@@ -45,6 +45,9 @@
             display: inline-block;
             margin: 0 5px;
         }
+        #seq_res, #prime_res, #prime_error {
+            display: none;
+        }
     </style>
 </head>
 <body style>
@@ -146,7 +149,7 @@
                             <button type="submit" class="btn btn-success active" onclick="sumSeq()">Sum</button>
                         </div>
 
-                        <h5>Summary: <span id="seq_sum" class="text-info"></span></h5>
+                        <h5 id="seq_res">Summary: <span id="seq_sum" class="text-info"></span></h5>
                     </div>
                 </div>
             </div>
@@ -157,7 +160,18 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Section 5</h5>
-                        <h6 class="card-subtitle text-muted">discription</h6>
+                        <h6 class="card-subtitle text-muted">Check number is prime or not</h6>
+
+
+                        <div class="form-wraper">
+                            <div class="form-group">
+                                <label for="target_num">Target</label>
+                                <input id="target_num" type="number" max="99999999999999" min="1" class="form-control input_inline" placeholder="Enter a number!">
+                            </div>
+                            <button type="submit" class="btn btn-success active" onclick="checkPrime()">Check</button>
+                        </div>
+                        <h5 id="prime_res"><span id="prime_target"></span> is <span id="prime_result" class="text-info"></span></h5>
+                        <h5 id="prime_error" class="text-warning">Please input propper numbers!</h5>
                     </div>
                 </div>
             </div>
@@ -168,7 +182,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Section 6</h5>
-                        <h6 class="card-subtitle text-muted">Generate n length of Fibonacci numbers</h6>
+                        <h6 class="card-subtitle text-muted">Generate Fibonacci numbers</h6>
 
                         <div class="form-wraper">
                             <div class="form-group">
@@ -196,6 +210,7 @@
     </div>
     <script src="src/section1.js"></script>
     <script src="src/section4.js"></script>
+    <script src="src/section5.js"></script>
     <script src="src/section6.js"></script>
 </body>
 </html>
