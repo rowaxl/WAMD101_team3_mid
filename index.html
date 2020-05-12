@@ -31,9 +31,15 @@
         .row {
             margin-top: 20px;
         }
+        .form-wraper {
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+        }
         .input_inline {
             display: inline-block;
-            width: 50%;
+            min-width: 200px;
+            min-height: 50px;
         }
         .badge_inline {
             display: inline-block;
@@ -90,7 +96,7 @@
                             <input id="name_box" type="text" class="form-control" placeholder="Enter Your Name!">
                         </div>
 
-                        <button type="submit" class="btn btn-success" onclick="greeting()">Greet!</button>
+                        <button type="submit" class="btn btn-succes s" onclick="greeting()">Greet!</button>
                         <h6 id="greeting" class="card-subtitle"></h3>
                     </div>
                 </div>
@@ -124,7 +130,23 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Section 4</h5>
-                        <h6 class="card-subtitle text-muted">discription</h6>
+                        <h6 class="card-subtitle text-muted">Calculate summary of arithmatic sequence</h6>
+
+                        <div class="form-wraper">
+                            <div class="form-group">
+                                <label for="initial_num">Initial</label>
+                                <input id="initial_num" type="number" max="9999999999" class="form-control input_inline" placeholder="Enter initial number">
+                                <div class="invalid-feedback">Please use proper number</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_num">Last</label>
+                                <input id="last_num" type="number" max="9999999999" class="form-control input_inline" placeholder="Enter last number">
+                                <div class="invalid-feedback">Please use proper number</div>
+                            </div>
+                            <button type="submit" class="btn btn-success active" onclick="sumSeq()">Sum</button>
+                        </div>
+
+                        <h5>Summary: <span id="seq_sum" class="text-info"></span></h5>
                     </div>
                 </div>
             </div>
@@ -148,10 +170,12 @@
                         <h5 class="card-title">Section 6</h5>
                         <h6 class="card-subtitle text-muted">Generate n length of Fibonacci numbers</h6>
 
-                        <div class="form-group">
-                            <label for="fibo_lenght">Length</label>
-                            <input id="fibo_lenght" type="number" max="100" min="1" class="form-control input_inline" placeholder="Enter length you want!">
-                            <button type="submit" class="btn btn-success" onclick="fibo()">Generate</button>
+                        <div class="form-wraper">
+                            <div class="form-group">
+                                <label for="fibo_lenght">Length</label>
+                                <input id="fibo_lenght" type="number" max="100" min="1" class="form-control input_inline" placeholder="Enter length you want!">
+                            </div>
+                            <button type="submit" class="btn btn-success active" onclick="fibo()">Generate</button>
                         </div>
                         <div id="fibo_result" class="fibo_wrap"></div>
                     </div>
@@ -171,6 +195,7 @@
         </div>
     </div>
     <script src="src/section1.js"></script>
+    <script src="src/section4.js"></script>
     <script src="src/section6.js"></script>
 </body>
 </html>
