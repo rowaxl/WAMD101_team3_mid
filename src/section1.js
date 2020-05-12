@@ -3,5 +3,5 @@ function greeting () {
     let inputName = nameBox.value;
 
     let outputBox = document.getElementById("greeting");
-    outputBox.innerHTML = "Hi, " + inputName;
+    outputBox.innerHTML = `Hi, ${inputName}, Welcome to this page`;
 }
