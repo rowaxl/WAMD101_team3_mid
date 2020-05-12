@@ -1,5 +1,5 @@
 function fibo() {
-  const length = document.getElementById('fibo_lenght').value;
+  const length = parseInt(document.getElementById('fibo_lenght').value);
 
   if (length <= 0 || length > 100) {
     return; // do nothing
