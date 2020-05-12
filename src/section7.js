@@ -13,8 +13,6 @@ function calcDay() {
     return;
   }
 
-  console.log(days);
-
   document.getElementById('year_error').style = 'display: none;';
   document.getElementById('days_res').style = 'display: block;';
 
