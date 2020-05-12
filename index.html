@@ -2,11 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>WAMD101 May midterm</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        html {
+            font-size: 1.1rem;
+        }
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background: #eee;
+        }
+        @media (max-width: 991px) {
+            html {
+                font-size: 1.3rem;
+            }
+            .row > .col {
+                margin-top: 10px;
+            }
+        }
+        .row {
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<body>
-    <h1></h1>
-    
+<body style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Team3 (Chizuru / Koro / Wonjae)</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-items">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-items">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">S1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">S2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">S3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">S4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">S5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">S6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">S7</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Wrap of all body -->
+    <div class="container">
+        <div class="row">
+            <!-- breal point: 991px -->
+            <div class="col"> 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Section 1</h5>
+                        <h6 class="card-subtitle text-muted">Please input your name!</h6>
+
+                        <div class="form-group">
+                            <label for="name_box">Name</label>
+                            <input id="name_box" type="text" class="form-control" placeholder="Enter Your Name!">
+                        </div>
+
+                        <button type="submit" class="btn btn-success" onclick="greeting()">Greet!</button>
+                        <h6 id="greeting" class="card-subtitle"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col"> 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Section 2</h5>
+                        <h6 class="card-subtitle text-muted">discription</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col"> 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Section 3</h5>
+                        <h6 class="card-subtitle text-muted">discription</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col"> 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Section 4</h5>
+                        <h6 class="card-subtitle text-muted">discription</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col"> 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Section 5</h5>
+                        <h6 class="card-subtitle text-muted">discription</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col"> 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Section 6</h5>
+                        <h6 class="card-subtitle text-muted">discription</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col"> 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Section 7</h5>
+                        <h6 class="card-subtitle text-muted">discription</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
