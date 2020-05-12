@@ -38,7 +38,7 @@
         }
         .input_inline {
             display: inline-block;
-            min-width: 200px;
+            min-width: 150px;
             min-height: 50px;
         }
         .badge_inline {
@@ -94,12 +94,14 @@
                         <h5 class="card-title">Section 1</h5>
                         <h6 class="card-subtitle text-muted">Please input your name!</h6>
 
-                        <div class="form-group">
-                            <label for="name_box">Name</label>
-                            <input id="name_box" type="text" class="form-control" placeholder="Enter Your Name!">
+                        <div class="form-wraper">
+                            <div class="form-group">
+                                <label for="name_box">Name</label>
+                                <input id="name_box" type="text" class="form-control" placeholder="Enter Your Name!">
+                            </div>
+    
+                            <button type="submit" class="btn btn-success active" onclick="greeting()">Greet</button>
                         </div>
-
-                        <button type="submit" class="btn btn-succes s" onclick="greeting()">Greet!</button>
                         <h6 id="greeting" class="card-subtitle"></h3>
                     </div>
                 </div>
@@ -111,13 +113,21 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Section 2</h5>
-                        <div>
-                            <input id="firstNum" type="number">
-                            <input id="secondNum" type="number">
-                            <button onclick="plus()">+</button>
-                            <button onclick="minus()">-</button>
-                            <button onclick="multiply()">×</button>
-                            <button onclick="divide()">÷</button>
+                        <h6 class="card-subtitle text-muted">Basic Math with two number(x, y)</h6>
+
+                        <div class="form-wraper">
+                            <div class="form-group">
+                                <label for="firstNum">X</label>
+                                <input id="firstNum" type="number" max="9999999999" class="form-control input_inline" placeholder="Enter a number">
+                            </div>
+                            <div class="form-group">
+                                <label for="secondNum">Y</label>
+                                <input id="secondNum" type="number" max="9999999999" class="form-control input_inline" placeholder="Enter a number">
+                            </div>
+                            <button class="btn btn-success active" onclick="plus()">+</button>
+                            <button class="btn btn-warning active" onclick="minus()">-</button>
+                            <button class="btn btn-info active" onclick="multiply()">×</button>
+                            <button class="btn btn-danger active" onclick="divide()">÷</button>
                         </div>
                         <h5 id="answerBox">answer</h5>
                     </div>
@@ -130,10 +140,16 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Section 3</h5>
-                        <input id="ageInputBox" type="text">
-                        <button onclick="displayMessage()"></button>
+                        <h6 class="card-subtitle text-muted">Get advice depends on your age</h6>
+
+                        <div class="form-wraper">
+                            <div class="form-group">
+                                <label for="ageInputBox">Age</label>
+                                <input id="ageInputBox" type="number"  class="form-control input_inline" >
+                            </div>
+                            <button type="submit" class="btn btn-success active" onclick="displayMessage()">Advice</button>
+                        </div>
                         <h5 id="ageMessage"></h5>
-                        <h6 class="card-subtitle text-muted">discription</h6>
                     </div>
                 </div>
             </div>
@@ -149,15 +165,15 @@
                         <div class="form-wraper">
                             <div class="form-group">
                                 <label for="initial_num">Initial</label>
-                                <input id="initial_num" type="number" max="9999999999" class="form-control input_inline" placeholder="Enter initial number">
+                                <input id="initial_num" type="number" max="9999999999" class="form-control input_inline" placeholder="Initial number">
                                 <div class="invalid-feedback">Please use proper number</div>
                             </div>
                             <div class="form-group">
                                 <label for="last_num">Last</label>
-                                <input id="last_num" type="number" max="9999999999" class="form-control input_inline" placeholder="Enter last number">
+                                <input id="last_num" type="number" max="9999999999" class="form-control input_inline" placeholder="Last number">
                                 <div class="invalid-feedback">Please use proper number</div>
                             </div>
-                            <button type="submit" class="btn btn-success active" onclick="sumSeq()">Sum</button>
+                            <button type="submit" class="btn btn-success active" onclick="sumSeq()">Calc</button>
                         </div>
 
                         <h5 id="seq_res">Summary: <span id="seq_sum" class="text-info"></span></h5>
@@ -220,7 +236,7 @@
                                 <label for="birth_year">Birth Year</label>
                                 <input id="birth_year" type="number" max="2020" min="1900" class="form-control input_inline" placeholder="Enter your birth year!">
                             </div>
-                            <button type="submit" class="btn btn-success active" onclick="calcDay()">Calculate</button>
+                            <button type="submit" class="btn btn-success active" onclick="calcDay()">Calc</button>
                         </div>
                         <h5 id="days_res">You lived: <span id="lived_days" class="text-info"></span> Days!</h5>
                         <h5 id="year_error" class="text-warning">Please input propper numbers!</h5>
