@@ -45,7 +45,7 @@
             display: inline-block;
             margin: 0 5px;
         }
-        #seq_res, #prime_res, #prime_error {
+        #seq_res, #prime_res, #prime_error, #days_res, #year_error {
             display: none;
         }
     </style>
@@ -213,7 +213,17 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Section 7</h5>
-                        <h6 class="card-subtitle text-muted">discription</h6>
+                        <h6 class="card-subtitle text-muted">Calculate how many days you lived from when you birth</h6>
+
+                        <div class="form-wraper">
+                            <div class="form-group">
+                                <label for="birth_year">Birth Year</label>
+                                <input id="birth_year" type="number" max="2020" min="1970" class="form-control input_inline" placeholder="Enter length you want!">
+                            </div>
+                            <button type="submit" class="btn btn-success active" onclick="calcDay()">Calculate</button>
+                        </div>
+                        <h5 id="days_res">You lived: <span id="lived_days" class="text-info"></span> Days!</h5>
+                        <h5 id="year_error" class="text-warning">Please input propper numbers!</h5>
                     </div>
                 </div>
             </div>
@@ -225,5 +235,6 @@
     <script src="src/section4.js"></script>
     <script src="src/section5.js"></script>
     <script src="src/section6.js"></script>
+    <script src="src/section7.js"></script>
 </body>
 </html>
