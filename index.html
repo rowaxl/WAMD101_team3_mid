@@ -102,7 +102,15 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Section 2</h5>
-                        <h6 class="card-subtitle text-muted">discription</h6>
+                        <div>
+                            <input id="firstNum" type="number">
+                            <input id="secondNum" type="number">
+                            <button onclick="plus()">+</button>
+                            <button onclick="minus()">-</button>
+                            <button onclick="multiply()">×</button>
+                            <button onclick="divide()">÷</button>
+                        </div>
+                        <h5 id="answerBox">answer</h5>
                     </div>
                 </div>
             </div>
@@ -171,6 +179,7 @@
         </div>
     </div>
     <script src="src/section1.js"></script>
+    <script src="src/section2.js"></script>
     <script src="src/section6.js"></script>
 </body>
 </html>
