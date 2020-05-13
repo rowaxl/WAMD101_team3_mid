@@ -20,18 +20,10 @@
             width: 100vw;
             background: #eee;
         }
-        @media (max-width: 991px) {
-            html {
-                font-size: 1.3rem;
-            }
-            .row > .col {
-                margin-top: 10px;
-            }
-        }
         .row {
             margin-top: 20px;
         }
-        .form-wraper {
+        .form-wrapper {
             width: 100%;
             display: inline-flex;
             justify-content: space-between;
@@ -48,6 +40,34 @@
         #seq_res, #prime_res, #prime_error, #days_res, #year_error {
             display: none;
         }
+        .button-wrapper {
+            display: flex;
+            height: inherit;
+            align-items: center;
+            justify-content: space-between;
+            width: fit-content;
+        }
+        .button-wrapper > button {
+            margin: 0 10px;
+        }
+        .btn-calc {
+            width: 55px;
+        }
+        @media (max-width: 991px) {
+            html {
+                font-size: 1.3rem;
+            }
+            .row > .col {
+                margin-top: 10px;
+            }
+            .button-wrapper {
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .button-wrapper > button {
+                margin: 1px 0;
+            }
+        }
     </style>
 </head>
 <body style>
@@ -60,25 +80,25 @@
         <div class="collapse navbar-collapse" id="nav-items">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">S1</a>
+                    <a class="nav-link" href="#S1">S1</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">S2</a>
+                    <a class="nav-link" href="#S2">S2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">S3</a>
+                    <a class="nav-link" href="#S3">S3</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">S4</a>
+                    <a class="nav-link" href="#S4">S4</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">S5</a>
+                    <a class="nav-link" href="#S5">S5</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">S6</a>
+                    <a class="nav-link" href="#S6">S6</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">S7</a>
+                    <a class="nav-link" href="#S7">S7</a>
                 </li>
             </ul>
         </div>
@@ -91,10 +111,10 @@
             <div class="col"> 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Section 1</h5>
+                        <h5 class="card-title"><a id="S1">Section 1</a></h5>
                         <h6 class="card-subtitle text-muted">Please input your name!</h6>
 
-                        <div class="form-wraper">
+                        <div class="form-wrapper">
                             <div class="form-group">
                                 <label for="name_box">Name</label>
                                 <input id="name_box" type="text" class="form-control" placeholder="Enter Your Name!">
@@ -112,10 +132,10 @@
             <div class="col"> 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Section 2</h5>
+                        <h5 class="card-title"><a id="S2">Section 2</a></h5>
                         <h6 class="card-subtitle text-muted">Basic Math with two number(x, y)</h6>
 
-                        <div class="form-wraper">
+                        <div class="form-wrapper">
                             <div class="form-group">
                                 <label for="firstNum">X</label>
                                 <input id="firstNum" type="number" max="9999999999" class="form-control input_inline" placeholder="Enter a number">
@@ -124,10 +144,13 @@
                                 <label for="secondNum">Y</label>
                                 <input id="secondNum" type="number" max="9999999999" class="form-control input_inline" placeholder="Enter a number">
                             </div>
-                            <button class="btn btn-success active" onclick="plus()">+</button>
-                            <button class="btn btn-warning active" onclick="minus()">-</button>
-                            <button class="btn btn-info active" onclick="multiply()">×</button>
-                            <button class="btn btn-danger active" onclick="divide()">÷</button>
+
+                            <div class="button-wrapper">
+                                <button class="btn btn-success active btn-calc" onclick="plus()">+</button>
+                                <button class="btn btn-warning active btn-calc" onclick="minus()">-</button>
+                                <button class="btn btn-info active btn-calc" onclick="multiply()">×</button>
+                                <button class="btn btn-danger active btn-calc" onclick="divide()">÷</button>
+                            </div>
                         </div>
                         <h5 id="answerBox">answer</h5>
                     </div>
@@ -139,10 +162,10 @@
             <div class="col"> 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Section 3</h5>
+                        <h5 class="card-title"><a id="S3">Section 3</a></h5>
                         <h6 class="card-subtitle text-muted">Get advice depends on your age</h6>
 
-                        <div class="form-wraper">
+                        <div class="form-wrapper">
                             <div class="form-group">
                                 <label for="ageInputBox">Age</label>
                                 <input id="ageInputBox" type="number"  class="form-control input_inline" >
@@ -159,10 +182,10 @@
             <div class="col"> 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Section 4</h5>
+                        <h5 class="card-title"><a id="S4">Section 4</a></h5>
                         <h6 class="card-subtitle text-muted">Calculate summary of arithmatic sequence</h6>
 
-                        <div class="form-wraper">
+                        <div class="form-wrapper">
                             <div class="form-group">
                                 <label for="initial_num">Initial</label>
                                 <input id="initial_num" type="number" max="9999999999" class="form-control input_inline" placeholder="Initial number">
@@ -186,11 +209,11 @@
             <div class="col"> 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Section 5</h5>
+                        <h5 class="card-title"><a id="S5">Section 5</a></h5>
                         <h6 class="card-subtitle text-muted">Check number is prime or not</h6>
 
 
-                        <div class="form-wraper">
+                        <div class="form-wrapper">
                             <div class="form-group">
                                 <label for="target_num">Target</label>
                                 <input id="target_num" type="number" max="99999999999999" min="1" class="form-control input_inline" placeholder="Enter a number!">
@@ -208,10 +231,10 @@
             <div class="col"> 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Section 6</h5>
+                        <h5 class="card-title"><a id="S6">Section 6</a></h5>
                         <h6 class="card-subtitle text-muted">Generate Fibonacci numbers</h6>
 
-                        <div class="form-wraper">
+                        <div class="form-wrapper">
                             <div class="form-group">
                                 <label for="fibo_lenght">Length</label>
                                 <input id="fibo_lenght" type="number" max="100" min="1" class="form-control input_inline" placeholder="Enter length you want!">
@@ -228,10 +251,10 @@
             <div class="col"> 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Section 7</h5>
+                        <h5 class="card-title"><a id="S7">Section 7</a></h5>
                         <h6 class="card-subtitle text-muted">Calculate how many days you lived from when you birth</h6>
 
-                        <div class="form-wraper">
+                        <div class="form-wrapper">
                             <div class="form-group">
                                 <label for="birth_year">Birth Year</label>
                                 <input id="birth_year" type="number" max="2020" min="1900" class="form-control input_inline" placeholder="Enter your birth year!">
