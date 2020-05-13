@@ -1,7 +1,6 @@
 function checkPrime() {
   const number = parseInt(document.getElementById('target_num').value);
 
-
   if (!number) {
     document.getElementById('prime_error').style = 'display: block;'
     return;
@@ -21,6 +20,8 @@ function checkPrime() {
 }
 
 function isPrime(number) {
+  if (number < 2) return false;
+
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
       return false;
